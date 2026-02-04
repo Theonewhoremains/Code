@@ -176,6 +176,12 @@ header {
   background: none;
   border: none;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0;
 }
 
 .menu-toggle span {
@@ -183,7 +189,8 @@ header {
   width: 24px;
   height: 2px;
   background: var(--text);
-  margin: 5px 0;
+  margin: 0;
+  border-radius: 999px;
   transition: transform var(--transition), opacity var(--transition);
 }
 
@@ -480,6 +487,7 @@ footer {
 
   .menu-toggle {
     display: inline-flex;
+    flex-direction: column;
   }
 
   .mobile-menu {
