@@ -104,21 +104,6 @@ header {
   transition: color var(--transition);
 }
 
-.nav-links a.active,
-.mobile-menu a.active {
-  background: var(--primary);
-  color: #fff;
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-}
-
-.nav-links a.active:hover,
-.nav-links a.active:focus,
-.mobile-menu a.active:hover,
-.mobile-menu a.active:focus {
-  color: #fff;
-}
-
 .nav-links a:hover,
 .nav-links a:focus {
   color: var(--primary);
@@ -127,23 +112,16 @@ header {
 .nav-cta {
   padding: 0.65rem 1.25rem;
   border-radius: 999px;
-  background: transparent;
-  color: var(--primary);
+  background: var(--primary);
+  color: #fff;
   font-weight: 500;
-  border: 1px solid var(--primary);
-  transition: transform var(--transition), background var(--transition), color var(--transition);
+  transition: transform var(--transition), background var(--transition);
 }
 
 .nav-cta:hover,
 .nav-cta:focus {
-  background: var(--primary);
-  color: #fff;
+  background: var(--primary-dark);
   transform: translateY(-1px);
-}
-
-.nav-cta.active {
-  background: var(--primary);
-  color: #fff;
 }
 
 .dropdown {
@@ -238,7 +216,6 @@ header {
   box-shadow: none;
   border: none;
   padding-left: 0.75rem;
-  display: block;
 }
 
 .hero {
@@ -371,12 +348,14 @@ header {
 }
 
 .step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
   color: var(--primary);
+  display: grid;
+  place-items: center;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 1;
-  min-width: 24px;
-  padding-top: 0.2rem;
 }
 
 .cta-section {
@@ -517,22 +496,6 @@ footer {
 
   .mobile-menu.open {
     display: flex;
-  }
-
-  .dropdown-menu {
-    display: block;
-  }
-}
-
-@media (min-width: 961px) {
-  .dropdown-menu {
-    display: none;
-  }
-
-  .dropdown:hover .dropdown-menu,
-  .dropdown:focus-within .dropdown-menu,
-  .dropdown.open .dropdown-menu {
-    display: none;
   }
 }
 
