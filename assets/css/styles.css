@@ -508,24 +508,6 @@ footer {
     padding: 1.5rem;
   }
 }
-/* ===== FIX DESKTOP BLUE BOX ON NAV CTA ===== */
-
-.nav-cta,
-.nav-cta:visited {
-  color: #fff;
-  background: var(--primary);
-  box-shadow: none;
-}
-
-.nav-cta:focus,
-.nav-cta:active {
-  outline: none;
-  box-shadow: none;
-  background: var(--primary);
-}
-
-/* Keep accessibility but remove ugly box */
-.nav-cta:focus-visible {
-  outline: 2px solid rgba(27, 58, 87, 0.35);
-  outline-offset: 3px;
+.nav-cta {
+  color: #ffffff !important;
 }
