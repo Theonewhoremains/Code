@@ -104,21 +104,6 @@ header {
   transition: color var(--transition);
 }
 
-.nav-links a.active,
-.mobile-menu a.active {
-  background: var(--primary);
-  color: #fff;
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-}
-
-.nav-links a.active:hover,
-.nav-links a.active:focus,
-.mobile-menu a.active:hover,
-.mobile-menu a.active:focus {
-  color: #fff;
-}
-
 .nav-links a:hover,
 .nav-links a:focus {
   color: var(--primary);
@@ -137,11 +122,6 @@ header {
 .nav-cta:focus {
   background: var(--primary-dark);
   transform: translateY(-1px);
-}
-
-.nav-cta.active {
-  background: var(--primary-dark);
-  color: #fff;
 }
 
 .dropdown {
