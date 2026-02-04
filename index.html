@@ -1,208 +1,199 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dragging papers</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
-
-
-
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  background-image: url("images/bg.jpg");
-  background-size: cover;
-  background-position: center center;
-  padding: 0px 0px;
-}
-
-.paper {
-  background-image: url("images/peper.jpg");
-  background-size: 900px;
-  background-position: center center;
-  padding: 20px 100px;
-/*  min-width: 800px; */
-  
-  transform: rotateZ(-5deg);
-  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
-  
-  position: absolute;
-}
-
-.paper.heart {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  padding: 0;
-  border-radius: 50%;
-}
-
-.paper.image {
-  padding: 10px;
-}
-.paper.image p {
-  font-size: 50px;
-}
-
-img {
-  max-height: 400px;
-  width: 100%;
-  user-select: none;
-}
-
-.paper.heart::after {
-  content: "";
-  background-image: url('images/heart.gif');
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: 200px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  opacity: 0.6;
-}
-
-p {
-  font-family: 'Zeyada';
-  font-size: 60px;
-  color: rgb(0,0,100);
-  opacity: 0.75;
-  user-select: none;
- 
-  box-shadow: 2px 1.5px 1px rgba(0,0,105,0.9);
-  text-shadow: 2px 1.5px 1px rgba(0,0,105,0.9);
- }
-
-</style>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kitten Hub | Professional Online Consultation</title>
+  <meta name="description" content="Kitten Hub provides professional online consultation services for kitten owners across India and international clients. Remote, confidential, consultation-first guidance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <p><a href="https://music.youtube.com/playlist?list=PLD55cwEKJ8W3qgyZ56V02P-YkExAsn_TB&si=Nq2AcJmGe1iJS7Y4">For my life <br> ♥ </a></p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html">Kitten Hub</a>
+      <nav class="nav-links" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+        </ul>
+        <a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="container mobile-menu" data-mobile-menu>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+      </ul>
+      <a class="btn-primary" href="contact.html">Contact</a>
+    </div>
+  </header>
 
-<div class="paper heart">
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Online Consultation · Global Clients</span>
+          <h1>Professional Online Consultation for Kitten Owners</h1>
+          <p>Kitten Hub delivers calm, structured, consultation-first guidance for kitten owners across India and international clients. Every engagement is remote, confidential, and tailored to your household.</p>
+          <div class="highlight">
+            Payments are handled separately via secure payment links after we discuss your requirements.
+          </div>
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a class="btn-primary" href="contact.html">Discuss Your Requirements</a>
+            <a class="btn-secondary" href="services.html">Explore Services</a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <h3>Trusted Consultation Standards</h3>
+          <p>We keep every session professional, structured, and focused on your goals. You receive clear next steps and written summaries when needed.</p>
+          <div class="card-grid" style="margin-top: 1.5rem;">
+            <div>
+              <h4>Remote &amp; Flexible</h4>
+              <p>Online delivery with scheduling that suits different time zones.</p>
+            </div>
+            <div>
+              <h4>Confidential &amp; Professional</h4>
+              <p>We follow a consultation-first approach with privacy at the core.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Why Clients Choose Kitten Hub</h2>
+        <p class="section-subtitle reveal">Focused guidance, gentle communication, and a structured consultation flow that respects your time and privacy.</p>
+        <div class="card-grid three">
+          <div class="card reveal">
+            <h3>Remote &amp; Flexible</h3>
+            <p>Consultations are fully online with scheduling support for local and international clients.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Consultation-First</h3>
+            <p>We start with a discovery call to understand your situation before recommending next steps.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Confidential &amp; Professional</h3>
+            <p>Your information remains private, and all guidance is shared in a calm, supportive tone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="paper red" >
-<p class="p1">Happy birthday, my love, my soul, my world, my everything❤️ </p>
-</div>  
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Services Preview</h2>
+        <p class="section-subtitle reveal">Each service is tailored to your kitten, household, and lifestyle. No pricing is displayed publicly.</p>
+        <div class="card-grid two">
+          <div class="card reveal">
+            <h3>Foundational Kitten Owner Guidance</h3>
+            <p>Structured onboarding for new kitten owners, covering routines, household readiness, and expectations.</p>
+            <a class="btn-secondary" href="foundational-kitten-owner-guidance.html">Learn More</a>
+          </div>
+          <div class="card reveal">
+            <h3>Behavioral Assessment &amp; Guidance</h3>
+            <p>Observation-based guidance to support calm habits, play routines, and healthy boundaries.</p>
+            <a class="btn-secondary" href="behavioral-assessment-guidance.html">Learn More</a>
+          </div>
+          <div class="card reveal">
+            <h3>Kitten Nutrition &amp; Wellness Consultation</h3>
+            <p>Discussion-based consultation that helps you understand balanced nutrition and wellness routines.</p>
+            <a class="btn-secondary" href="kitten-nutrition-wellness.html">Learn More</a>
+          </div>
+          <div class="card reveal">
+            <h3>Long-Term Kitten Care Planning</h3>
+            <p>Forward-looking care planning to support growth milestones and lifestyle changes.</p>
+            <a class="btn-secondary" href="long-term-kitten-care.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="paper red" >
-<p class="p1">Stay strong, enjoy your day, and always keep smiling💜 </p>
-</div>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">How It Works</h2>
+        <p class="section-subtitle reveal">A transparent, consultation-based process designed for clarity and confidence.</p>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-number">1</div>
+            <div>
+              <h3>Client reaches out</h3>
+              <p>Share your situation via the contact form or email, and we confirm the next step.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-number">2</div>
+            <div>
+              <h3>Requirements are discussed</h3>
+              <p>We schedule a brief discussion to understand your goals and recommend a service path.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-number">3</div>
+            <div>
+              <h3>Secure payment link shared</h3>
+              <p>Payments are collected separately after we confirm scope and next steps.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-number">4</div>
+            <div>
+              <h3>Online consultation delivered</h3>
+              <p>We meet online and provide structured guidance with optional follow-up notes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="paper red" >
-<p class="p1"> Thanks for caring for me so much💙</p>
-</div>   
+    <section class="cta-section">
+      <div class="container cta-box reveal">
+        <div>
+          <h2>Ready to discuss your consultation needs?</h2>
+          <p>Connect with Kitten Hub to clarify your requirements and schedule a remote session.</p>
+        </div>
+        <a class="btn-primary" href="contact.html">Contact us</a>
+      </div>
+    </section>
+  </main>
 
-<div class="paper red" >
-<p class="p1"> Thanks for loving me so much❤️</p>
-</div>  
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Kitten Hub</h4>
+        <p>Professional online consultation services.</p>
+        <p>Location: India</p>
+      </div>
+      <div>
+        <h4>Policies</h4>
+        <p>Refund &amp; Cancellation Policy: Refunds are assessed case-by-case after consultation confirmation.</p>
+        <p>Privacy Policy: We respect client confidentiality and handle information responsibly.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: kittenhubonline@gmail.com</p>
+        <p>Payments are handled via secure payment links after discussion.</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 2rem; font-size: 0.85rem; color: var(--muted);">
+      © 2024 Kitten Hub. All rights reserved.
+    </div>
+  </footer>
 
-<div class="paper red" >
-<p class="p1"> Thank you for coming into my life and making it so beautiful💖</p>
-</div>
-  
-<div class="paper red" >
-<p class="p1">We've created countless memories💙 <br> I am right here with you and we will keep creating new memories for the rest of our life💚 </p>
-</div>
-  
-
-<div class="paper red" >
-<p class="p1">Never feel down or lost, because I am always here with you 🩵 <br> You are my everything and I will always love you💖 </p>
-</div>
-  
-<div class="paper red" >
-<p class="p1"> You will become successful and more stronger💝 <br> I am so proud of you and I support you in everything you do💕</p>
-</div>
-  
-<div class="paper red" >
-<p class="p1"> You have started a new chapter of your life and I know you will do great things💖</p>
-</div>
-  
-<div class="paper red" >
-<p class="p1"> I love you so much please always stay by my side💞 <br> You're my everything. ❤️</p>
-</div>
-  
-<div class="paper red" >
-<p class="p1">I will not be able to live without you. <br> Maybe I will survive but trust me I will not be able to live my life if you're not with me💔 </p>
-</div>
-  
-<div class="paper red" >
-<p class="p1"> I still remember how we used to irritate each other on chat and used to fight alot😅 <br> Always keep fighting with me but never go away</p>
-</div>
-  
-<div class="paper red" >
-<p class="p1"> I can't imagine my life without you. You're stuck with me and I will keep annoying you all my life💕</p>
-</div>
-  
-<div class="paper red" >
-<p class="p1"> I miss you so much and I need you in my arms right now I wish we were together right now i would've hugged you so tightly🩵 </p>
-</div>
-
-<div class="paper red" >
-<p class="p1">Celebrate your birthday with a huge smile on your face and imagine me right next to you, holding your hand and kissing your cheek💞</p>
-</div>
-
-<div class="paper red" >
-<p class="p1"> You are the strongest girl I have ever seen and you inspire me to be a better version of myself❤️‍🩹</p>
-</div>
-
-<div class="paper red" >
-<p class="p1"> You have given me countless beautiful memories and I can't wait to create more with you💖</p>
-</div>
-  
-<div class="paper red" >
-<p class="p1"> You have made my life so beautiful with your presence and your smile that I started living for you💛</p>
-</div>
-
-<div class="paper image" >
-  <p>You are my soul mate💙 <br> My best friend, the love of my life🩵 <br> You're everything I have ever wanted💕</p>
-</div>
-
-<div class="paper red" >
-<p class="p1">You are the kindest, most loving, caring, and perfect girl I have ever met You're the embodiment of everything good🌸</p>
-</div>
-
-<div class="paper" >
-<p class="p1">I love you so much and I pray for your success and happiness everyday</p>
-<p class="p2"> You deserve all the happiness this world has to offer❤️</p>
-</div>
-
-<div class="paper red" >
-<p class="p1"> You are the most precious person in my life💚</p>
-<p class="p2">Your are the treasure that I never wanna lose❤️‍🩹</p>
-</div>
-
-<div class="paper red" >
-<p class="p1">Happy Birthday❤️</p>
-<p class="p2">My Love, My Jaan, My Everything</p>
-</div>
-
-  
-  <script>
-
-  if ('ontouchstart' in window) {
-    // This is a mobile device
-    // Load mobile-specific script
-    var script = document.createElement('script');
-    script.src = 'mobile.js'; 
-    document.head.appendChild(script);
-  } else {
-    // This is a PC or a device with a mouse pointer
-    // Load PC-specific script
-    var script = document.createElement('script');
-    script.src = 'script.js'; 
-    document.head.appendChild(script);
-  }
-</script>
-
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
