@@ -2,198 +2,685 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kitten Hub | Professional Online Consultation</title>
-  <meta name="description" content="Kitten Hub provides professional online consultation services for kitten owners across India and international clients. Remote, confidential, consultation-first guidance.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitten Hub | Professional Online Consultation for Kitten Owners</title>
+  <meta name="description" content="Kitten Hub delivers calm, structured, consultation-first guidance for kitten owners across India and international clients. Remote, confidential, consultation-first guidance.">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/modern.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Interactive 60fps Liquid Aurora Canvas (Flowing light behind transparent glass) -->
+  <canvas id="liquid-canvas"></canvas>
+  <div class="glass-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Floating Liquid Navigation Capsule -->
   <header>
-    <div class="container navbar">
-      <a class="brand" href="index.html">Kitten Hub</a>
-      <nav class="nav-links" aria-label="Primary">
-          <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="how-it-works.html">How It Works</a></li>
-      </ul>
-        <a class="nav-cta" href="contact.html">Contact</a>
+    <div class="nav-glass-capsule">
+      <a class="brand" href="index.html" aria-label="Kitten Hub Home">
+        <div class="brand-cat-prism">
+          <!-- Cyber Feline SVG Icon -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58 1.42 3.82-.16 5.76.47 1.06.74 2.21.74 3.42 0 4.97-4.03 9-9 9s-9-4.03-9-9c0-1.21.27-2.36.74-3.42C2.16 6.82 2.18 3.58 3.58 3c1.4-.58 4.65.26 6.42 2.26.65-.17 1.33-.26 2-.26z"/>
+            <circle cx="9" cy="13" r="1.3" fill="currentColor"/>
+            <circle cx="15" cy="13" r="1.3" fill="currentColor"/>
+            <path d="M10 16.5c1 .6 3 .6 4 0"/>
+          </svg>
+        </div>
+        <span class="brand-title">Kitten Hub<span class="brand-glow-dot">.</span></span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="how-it-works.html">How It Works</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </nav>
-      <button class="menu-toggle" data-menu-toggle aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <div class="nav-cta-wrap">
+        <a class="btn-sexy-liquid btn-sexy-primary" href="contact.html">
+          <span>Discuss Requirements</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+      <button class="menu-toggle" data-menu-toggle aria-label="Open mobile navigation">
+        <span></span><span></span><span></span>
       </button>
     </div>
-    <div class="container mobile-menu" data-mobile-menu>
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="how-it-works.html">How It Works</a></li>
-      </ul>
-      <a class="btn-primary" href="contact.html">Contact</a>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav" class="mobile-nav-panel">
+      <a class="nav-link active" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="how-it-works.html">How It Works</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+      <a class="btn-sexy-liquid btn-sexy-primary" href="contact.html" style="margin-top: 0.5rem;">Discuss Requirements</a>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="badge">Online Consultation · Global Clients</span>
-          <h1>Professional Online Consultation for Kitten Owners</h1>
-          <p>Kitten Hub delivers calm, structured, consultation-first guidance for kitten owners across India and international clients. Every engagement is remote, confidential, and tailored to your household.</p>
-          <div class="highlight">
-            Payments are handled separately via secure payment links after we discuss your requirements.
+  <main>
+    <!-- =======================================================================
+         HERO: Masterpiece Transparent Liquid Glass & Holographic Mascot
+         ======================================================================= -->
+    <section class="hero-stage">
+      <div class="container hero-dual-grid">
+        <div class="hero-content-col">
+          <div class="hero-neon-pill reveal-fade">
+            <span class="pulse-core"></span>
+            <span>Online Consultation · Global Clients</span>
           </div>
-          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a class="btn-primary" href="contact.html">Discuss Your Requirements</a>
-            <a class="btn-secondary" href="services.html">Explore Services</a>
+
+          <h1 class="hero-super-title reveal-fade">
+            Professional <span class="prismatic-text-glow">Online Consultation</span> for Kitten Owners
+          </h1>
+
+          <p class="hero-subtitle reveal-fade">
+            Kitten Hub delivers calm, structured, consultation-first guidance for kitten owners across India and international clients. Every engagement is remote, confidential, and tailored to your household.
+          </p>
+
+          <div class="hologram-policy-capsule reveal-fade">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <div>
+              <strong>Transparent Policy:</strong> Payments are handled separately via secure payment links after we discuss your requirements.
+            </div>
+          </div>
+
+          <div class="hero-btn-row reveal-fade">
+            <a class="btn-sexy-liquid btn-sexy-primary" href="contact.html">
+              <span>Discuss Your Requirements</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a class="btn-sexy-liquid btn-sexy-glass" href="#services-showcase">
+              <span>Explore Services</span>
+            </a>
           </div>
         </div>
-        <div class="card reveal">
-          <h3>Trusted Consultation Standards</h3>
-          <p>We keep every session professional, structured, and focused on your goals. You receive clear next steps and written summaries when needed.</p>
-          <div class="card-grid" style="margin-top: 1.5rem;">
-            <div>
-              <h4>Remote &amp; Flexible</h4>
-              <p>Online delivery with scheduling that suits different time zones.</p>
+
+        <!-- Right Side: Neo-Mochi Holographic Cat Console -->
+        <div class="hologram-stage-wrapper reveal-fade">
+          <div class="liquid-glass-slab hologram-console-glass" data-tilt>
+            <div class="hologram-laser-halo"></div>
+            <div id="purr-sparkles" class="purr-particle-dock"></div>
+
+            <!-- Neo-Mochi Vector Cat Avatar (Eye Tracking) -->
+            <div id="neo-cat-avatar" class="neo-cat-avatar" title="Click to interact!">
+              <svg class="neo-cat-svg" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Glowing Cyan Cyber Tail -->
+                <path class="cat-tail-cyber" d="M145 130C168 108 185 75 168 55C150 35 135 60 142 85" stroke="url(#cyberTailGrad)" stroke-width="12" stroke-linecap="round"/>
+
+                <!-- Cyber Hologram Body -->
+                <ellipse cx="100" cy="140" rx="65" ry="45" fill="url(#cyberBodyGrad)" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1.5"/>
+
+                <!-- Left Cyber Ear -->
+                <g class="cat-ear-l">
+                  <path d="M52 75L35 26C34 23 38 20 41 22L75 52" fill="url(#cyberEarGrad)"/>
+                  <path d="M50 68L40 34L68 54" fill="#00f0ff" opacity="0.85"/>
+                </g>
+
+                <!-- Right Cyber Ear -->
+                <g class="cat-ear-r">
+                  <path d="M148 75L165 26C166 23 162 20 159 22L125 52" fill="url(#cyberEarGrad)"/>
+                  <path d="M150 68L160 34L132 54" fill="#00f0ff" opacity="0.85"/>
+                </g>
+
+                <!-- Hologram Cat Head -->
+                <circle cx="100" cy="85" r="50" fill="url(#cyberFaceGrad)" stroke="rgba(0, 240, 255, 0.5)" stroke-width="1.8"/>
+
+                <!-- Hologram Forehead Markings -->
+                <path d="M96 42L100 55L104 42" stroke="#00f0ff" stroke-width="3" stroke-linecap="round"/>
+                <path d="M90 48L94 58" stroke="#00f0ff" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M110 48L106 58" stroke="#00f0ff" stroke-width="2.5" stroke-linecap="round"/>
+
+                <!-- Left Eye (Refractive) -->
+                <ellipse cx="78" cy="82" rx="11" ry="14" fill="#ffffff" filter="drop-shadow(0 0 8px rgba(0, 240, 255, 0.8))"/>
+                <circle id="cat-pupil-l" class="cat-pupil-tracked" cx="78" cy="82" r="7" fill="#030712"/>
+                <circle cx="76" cy="79" r="2.8" fill="#00f0ff"/>
+
+                <!-- Right Eye (Refractive) -->
+                <ellipse cx="122" cy="82" rx="11" ry="14" fill="#ffffff" filter="drop-shadow(0 0 8px rgba(0, 240, 255, 0.8))"/>
+                <circle id="cat-pupil-r" class="cat-pupil-tracked" cx="122" cy="82" r="7" fill="#030712"/>
+                <circle cx="120" cy="79" r="2.8" fill="#00f0ff"/>
+
+                <!-- Nose & Cyber Smile -->
+                <path d="M96 95C98 94 102 94 104 95L100 100Z" fill="#ff2a85"/>
+                <path d="M94 103C97 106 100 106 100 103C100 106 103 106 106 103" stroke="#00f0ff" stroke-width="2.4" stroke-linecap="round"/>
+
+                <!-- Neon Whiskers -->
+                <path d="M56 88L26 84M54 94L22 95M56 100L28 106" stroke="#00f0ff" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+                <path d="M144 88L174 84M146 94L178 95M144 100L172 106" stroke="#00f0ff" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+
+                <!-- Glowing Hologram Paws Resting on Glass Edge -->
+                <ellipse cx="70" cy="158" rx="14" ry="10" fill="rgba(15, 23, 42, 0.85)" stroke="#00f0ff" stroke-width="2"/>
+                <ellipse cx="130" cy="158" rx="14" ry="10" fill="rgba(15, 23, 42, 0.85)" stroke="#00f0ff" stroke-width="2"/>
+
+                <!-- Gradients -->
+                <defs>
+                  <linearGradient id="cyberFaceGrad" x1="50" y1="35" x2="150" y2="135" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1e293b"/>
+                    <stop offset="0.6" stop-color="#0f172a"/>
+                    <stop offset="1" stop-color="#f59e0b"/>
+                  </linearGradient>
+                  <linearGradient id="cyberBodyGrad" x1="40" y1="100" x2="160" y2="180" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#0f172a"/>
+                    <stop offset="1" stop-color="#ec4899"/>
+                  </linearGradient>
+                  <linearGradient id="cyberEarGrad" x1="35" y1="20" x2="75" y2="75" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00f0ff"/>
+                    <stop offset="1" stop-color="#0f172a"/>
+                  </linearGradient>
+                  <linearGradient id="cyberTailGrad" x1="145" y1="130" x2="180" y2="60" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#f59e0b"/>
+                    <stop offset="0.5" stop-color="#ec4899"/>
+                    <stop offset="1" stop-color="#00f0ff"/>
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
-            <div>
-              <h4>Confidential &amp; Professional</h4>
-              <p>We follow a consultation-first approach with privacy at the core.</p>
+
+            <!-- Purr Frequency Audio-Wave Bar -->
+            <div id="purr-wave" class="purr-frequency-bar" title="Click to trigger Purr Resonance!">
+              <div class="freq-line"></div>
+              <div class="freq-line"></div>
+              <div class="freq-line"></div>
+              <div class="freq-line"></div>
+              <div class="freq-line"></div>
+              <div class="freq-line"></div>
+              <span class="freq-label">Purr Resonance · Click Me</span>
+            </div>
+
+            <h3 class="console-heading">Trusted Consultation Standards</h3>
+            <p class="console-desc">
+              We keep every session professional, structured, and focused on your goals. You receive clear next steps and written summaries when needed.
+            </p>
+
+            <div class="console-metric-strip">
+              <div class="metric-glass-pill">
+                <span class="metric-num">100%</span>
+                <span class="metric-text">Remote</span>
+              </div>
+              <div class="metric-glass-pill">
+                <span class="metric-num">Global</span>
+                <span class="metric-text">Timezones</span>
+              </div>
+              <div class="metric-glass-pill">
+                <span class="metric-num">Private</span>
+                <span class="metric-text">Confidential</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- =======================================================================
+         BENTO GRID: Transparent Liquid Prisms
+         ======================================================================= -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title reveal">Why Clients Choose Kitten Hub</h2>
-        <p class="section-subtitle reveal">Focused guidance, gentle communication, and a structured consultation flow that respects your time and privacy.</p>
-        <div class="card-grid three">
-          <div class="card reveal">
+        <div class="section-title-wrap reveal-fade">
+          <span class="section-tag">Client Experience</span>
+          <h2 class="section-main-heading">Why Clients Choose Kitten Hub</h2>
+          <p class="section-desc">
+            Focused guidance, gentle communication, and a structured consultation flow that respects your time and privacy.
+          </p>
+        </div>
+
+        <div class="bento-prisms-grid">
+          <!-- Prism 1 -->
+          <div class="liquid-glass-slab bento-prism-card reveal-fade" data-tilt>
+            <div class="bento-cyber-icon" style="background: linear-gradient(135deg, rgba(0, 240, 255, 0.3) 0%, rgba(15, 23, 42, 0.7) 100%); color: var(--neon-cyan);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
             <h3>Remote &amp; Flexible</h3>
-            <p>Consultations are fully online with scheduling support for local and international clients.</p>
+            <p>Consultations are fully online with scheduling support for local and international clients across India, USA, Canada, and global timezones.</p>
+            <div class="bento-prism-foot">
+              <span>Online Video &amp; Voice Sessions →</span>
+            </div>
           </div>
-          <div class="card reveal">
+
+          <!-- Prism 2 -->
+          <div class="liquid-glass-slab bento-prism-card reveal-fade" data-tilt>
+            <div class="bento-cyber-icon" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(15, 23, 42, 0.7) 100%); color: var(--neon-amber);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
             <h3>Consultation-First</h3>
-            <p>We start with a discovery call to understand your situation before recommending next steps.</p>
+            <p>We start with a discovery conversation to understand your situation before recommending next steps or sharing payment links.</p>
+            <div class="bento-prism-foot">
+              <span>Discovery Discussion Flow →</span>
+            </div>
           </div>
-          <div class="card reveal">
+
+          <!-- Prism 3 -->
+          <div class="liquid-glass-slab bento-prism-card reveal-fade" data-tilt>
+            <div class="bento-cyber-icon" style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.3) 0%, rgba(15, 23, 42, 0.7) 100%); color: var(--neon-pink);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
             <h3>Confidential &amp; Professional</h3>
-            <p>Your information remains private, and all guidance is shared in a calm, supportive tone.</p>
+            <p>Your information remains private, and all guidance is shared in a calm, supportive, and structured consultation atmosphere.</p>
+            <div class="bento-prism-foot">
+              <span>Zero-Data Compromise →</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- =======================================================================
+         SERVICES: 4 Floating Transparent Glass Monoliths
+         ======================================================================= -->
+    <section id="services-showcase" class="section">
       <div class="container">
-        <h2 class="section-title reveal">Services Preview</h2>
-        <p class="section-subtitle reveal">Each service is tailored to your kitten, household, and lifestyle. No pricing is displayed publicly.</p>
-        <div class="card-grid two">
-          <div class="card reveal">
+        <div class="section-title-wrap reveal-fade">
+          <span class="section-tag">Tailored Programs</span>
+          <h2 class="section-main-heading">Services Preview</h2>
+          <p class="section-desc">
+            Each service is tailored to your kitten, household, and lifestyle. No pricing is displayed publicly, and payments are handled via secure links after discussion.
+          </p>
+        </div>
+
+        <!-- Filter Capsule Row -->
+        <div class="filter-capsules-bar reveal-fade">
+          <button class="filter-chip-btn active" data-filter="all">All Programs</button>
+          <button class="filter-chip-btn" data-filter="foundational">New Owner Onboarding</button>
+          <button class="filter-chip-btn" data-filter="behavioral">Behavior &amp; Routines</button>
+          <button class="filter-chip-btn" data-filter="nutrition">Nutrition &amp; Wellness</button>
+          <button class="filter-chip-btn" data-filter="longterm">Long-Term Milestones</button>
+        </div>
+
+        <div class="services-quad-grid">
+          <!-- Monolith 1 -->
+          <div class="liquid-glass-slab service-monolith reveal-fade" data-category="foundational" data-tilt>
+            <div class="service-meta-top">
+              <span class="service-id-badge">Program 01</span>
+              <div class="service-cat-emblem">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 10h18l-2 10H5L3 10z"></path><path d="M12 3a4 4 0 0 0-4 4v3h8V7a4 4 0 0 0-4-4z"></path></svg>
+              </div>
+            </div>
             <h3>Foundational Kitten Owner Guidance</h3>
-            <p>Structured onboarding for new kitten owners, covering routines, household readiness, and expectations.</p>
-            <a class="btn-secondary" href="foundational-kitten-owner-guidance.html">Learn More</a>
+            <p>Structured onboarding for new kitten owners, covering routines, household readiness, environmental setup, and expectations.</p>
+            <ul class="service-check-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Daily routine &amp; sleep cycle roadmap</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Household kitten-proofing setup</span>
+              </li>
+            </ul>
+            <div class="service-monolith-foot">
+              <a class="service-learn-link" href="foundational-kitten-owner-guidance.html">
+                <span>View Full Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a class="btn-sexy-liquid btn-sexy-glass" href="contact.html">Inquire</a>
+            </div>
           </div>
-          <div class="card reveal">
+
+          <!-- Monolith 2 -->
+          <div class="liquid-glass-slab service-monolith reveal-fade" data-category="behavioral" data-tilt>
+            <div class="service-meta-top">
+              <span class="service-id-badge">Program 02</span>
+              <div class="service-cat-emblem">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 1 9 9"></path><path d="M7 17l10-10"></path></svg>
+              </div>
+            </div>
             <h3>Behavioral Assessment &amp; Guidance</h3>
-            <p>Observation-based guidance to support calm habits, play routines, and healthy boundaries.</p>
-            <a class="btn-secondary" href="behavioral-assessment-guidance.html">Learn More</a>
+            <p>Observation-based guidance to support calm habits, play routines, scratching redirection, and gentle boundary-setting.</p>
+            <ul class="service-check-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Play routines &amp; redirecting scratching</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Gentle boundary-setting in living spaces</span>
+              </li>
+            </ul>
+            <div class="service-monolith-foot">
+              <a class="service-learn-link" href="behavioral-assessment-guidance.html">
+                <span>View Full Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a class="btn-sexy-liquid btn-sexy-glass" href="contact.html">Inquire</a>
+            </div>
           </div>
-          <div class="card reveal">
+
+          <!-- Monolith 3 -->
+          <div class="liquid-glass-slab service-monolith reveal-fade" data-category="nutrition" data-tilt>
+            <div class="service-meta-top">
+              <span class="service-id-badge">Program 03</span>
+              <div class="service-cat-emblem">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 11h16a8 8 0 0 1-16 0z"></path><line x1="2" y1="19" x2="22" y2="19"></line></svg>
+              </div>
+            </div>
             <h3>Kitten Nutrition &amp; Wellness Consultation</h3>
-            <p>Discussion-based consultation that helps you understand balanced nutrition and wellness routines.</p>
-            <a class="btn-secondary" href="kitten-nutrition-wellness.html">Learn More</a>
+            <p>Discussion-based consultation that helps you understand balanced nutrition, hydration habits, and daily wellness routines.</p>
+            <ul class="service-check-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Feeding schedules &amp; hydration strategies</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Household wellness habits</span>
+              </li>
+            </ul>
+            <div class="service-monolith-foot">
+              <a class="service-learn-link" href="kitten-nutrition-wellness.html">
+                <span>View Full Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a class="btn-sexy-liquid btn-sexy-glass" href="contact.html">Inquire</a>
+            </div>
           </div>
-          <div class="card reveal">
+
+          <!-- Monolith 4 -->
+          <div class="liquid-glass-slab service-monolith reveal-fade" data-category="longterm" data-tilt>
+            <div class="service-meta-top">
+              <span class="service-id-badge">Program 04</span>
+              <div class="service-cat-emblem">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+            </div>
             <h3>Long-Term Kitten Care Planning</h3>
-            <p>Forward-looking care planning to support growth milestones and lifestyle changes.</p>
-            <a class="btn-secondary" href="long-term-kitten-care.html">Learn More</a>
+            <p>Forward-looking care planning to support growth milestones, upcoming transitions, and lifestyle changes as your kitten matures.</p>
+            <ul class="service-check-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Milestone planning &amp; routine adjustments</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Transitions &amp; relocation readiness</span>
+              </li>
+            </ul>
+            <div class="service-monolith-foot">
+              <a class="service-learn-link" href="long-term-kitten-care.html">
+                <span>View Full Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a class="btn-sexy-liquid btn-sexy-glass" href="contact.html">Inquire</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- =======================================================================
+         TIMELINE: Holographic 4-Step Process Flow
+         ======================================================================= -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title reveal">How It Works</h2>
-        <p class="section-subtitle reveal">A transparent, consultation-based process designed for clarity and confidence.</p>
-        <div class="steps">
-          <div class="step reveal">
-            <div class="step-number">1</div>
-            <div>
-              <h3>Client reaches out</h3>
-              <p>Share your situation via the contact form or email, and we confirm the next step.</p>
+        <div class="section-title-wrap reveal-fade">
+          <span class="section-tag">Direct Flow</span>
+          <h2 class="section-main-heading">How It Works</h2>
+          <p class="section-desc">
+            A transparent, consultation-based process designed for clarity and confidence from initial contact to remote guidance.
+          </p>
+        </div>
+
+        <div class="stepper-timeline-row">
+          <div class="liquid-glass-slab step-glass-node reveal-fade">
+            <div class="step-neon-orb">1</div>
+            <h3>Client reaches out</h3>
+            <p>Share your situation via our contact form or email, and we confirm the next step.</p>
+          </div>
+
+          <div class="liquid-glass-slab step-glass-node reveal-fade">
+            <div class="step-neon-orb">2</div>
+            <h3>Requirements discussed</h3>
+            <p>We schedule a brief discussion to understand your goals and recommend a service path.</p>
+          </div>
+
+          <div class="liquid-glass-slab step-glass-node reveal-fade">
+            <div class="step-neon-orb">3</div>
+            <h3>Secure payment link</h3>
+            <p>Payments are collected separately via secure payment links after scope is confirmed.</p>
+          </div>
+
+          <div class="liquid-glass-slab step-glass-node reveal-fade">
+            <div class="step-neon-orb">4</div>
+            <h3>Online consultation</h3>
+            <p>We meet online and provide structured guidance with optional follow-up summary notes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         FAQ: Holographic Accordion
+         ======================================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title-wrap reveal-fade">
+          <span class="section-tag">Direct Answers</span>
+          <h2 class="section-main-heading">Frequently Asked Questions</h2>
+          <p class="section-desc">
+            Clear, transparent answers about our consultations, policies, and remote delivery.
+          </p>
+        </div>
+
+        <div class="faq-monolith-stack reveal-fade">
+          <div class="liquid-glass-slab faq-prism-card">
+            <button class="faq-trigger-btn" type="button">
+              <span>How are consultation payments handled?</span>
+              <div class="faq-chevron-disc">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-answer-drawer">
+              <p>Payments are never collected automatically on this website. After we discuss your requirements and confirm scope, we share a direct, secure payment link.</p>
             </div>
           </div>
-          <div class="step reveal">
-            <div class="step-number">2</div>
-            <div>
-              <h3>Requirements are discussed</h3>
-              <p>We schedule a brief discussion to understand your goals and recommend a service path.</p>
+
+          <div class="liquid-glass-slab faq-prism-card">
+            <button class="faq-trigger-btn" type="button">
+              <span>Do you work with international clients?</span>
+              <div class="faq-chevron-disc">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-answer-drawer">
+              <p>Yes. Kitten Hub is based in India and provides flexible scheduling support for clients globally, including Canada, the United States, and worldwide timezones.</p>
             </div>
           </div>
-          <div class="step reveal">
-            <div class="step-number">3</div>
-            <div>
-              <h3>Secure payment link shared</h3>
-              <p>Payments are collected separately after we confirm scope and next steps.</p>
+
+          <div class="liquid-glass-slab faq-prism-card">
+            <button class="faq-trigger-btn" type="button">
+              <span>What is your Refund &amp; Cancellation Policy?</span>
+              <div class="faq-chevron-disc">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-answer-drawer">
+              <p>Refunds are assessed on a case-by-case basis after consultation confirmation to maintain fairness and professionalism.</p>
             </div>
           </div>
-          <div class="step reveal">
-            <div class="step-number">4</div>
-            <div>
-              <h3>Online consultation delivered</h3>
-              <p>We meet online and provide structured guidance with optional follow-up notes.</p>
+
+          <div class="liquid-glass-slab faq-prism-card">
+            <button class="faq-trigger-btn" type="button">
+              <span>How are sessions delivered?</span>
+              <div class="faq-chevron-disc">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-answer-drawer">
+              <p>All sessions are delivered 100% remotely via secure online video or voice consultation, followed by written notes and summaries if needed.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-section">
-      <div class="container cta-box reveal">
-        <div>
-          <h2>Ready to discuss your consultation needs?</h2>
-          <p>Connect with Kitten Hub to clarify your requirements and schedule a remote session.</p>
+    <!-- =======================================================================
+         CONTACT TERMINAL: Ultra-Transparent Console
+         ======================================================================= -->
+    <section class="section">
+      <div class="container contact-split-stage">
+        <div class="reveal-fade">
+          <span class="section-tag">Direct Transmission</span>
+          <h2 class="section-main-heading">Connect with Kitten Hub</h2>
+          <p class="section-desc" style="margin-bottom: 2.25rem;">
+            We respond to all consultation inquiries with clarity and professionalism. Sessions are delivered online only.
+          </p>
+
+          <div class="liquid-glass-slab contact-prism-info">
+            <div class="contact-prism-item">
+              <div class="contact-neon-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <h4>Direct Email</h4>
+                <p><a href="mailto:kittenhubonline@gmail.com" style="color: var(--neon-cyan); font-weight: 700; text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);">kittenhubonline@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-prism-item">
+              <div class="contact-neon-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <h4>Location &amp; Delivery</h4>
+                <p>India (serving international clients in Canada, USA, and worldwide).</p>
+              </div>
+            </div>
+
+            <div class="contact-prism-item">
+              <div class="contact-neon-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+              <div>
+                <h4>Payment Link Policy</h4>
+                <p>Payments are handled separately via secure payment links after discussion.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <a class="btn-primary" href="contact.html">Contact us</a>
+
+        <!-- Terminal Form -->
+        <div class="liquid-glass-slab form-terminal-panel reveal-fade">
+          <form id="consultation-form" action="https://formspree.io/f/xbdknvwy" method="POST">
+            <div class="form-row-duo">
+              <div class="terminal-field">
+                <label for="name">Full Name *</label>
+                <input id="name" name="name" class="terminal-input" type="text" placeholder="Your name" required>
+              </div>
+              <div class="terminal-field">
+                <label for="email">Email Address *</label>
+                <input id="email" name="email" class="terminal-input" type="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+
+            <div class="terminal-field">
+              <label for="service">Service Interest</label>
+              <select id="service" name="service" class="terminal-input">
+                <option value="Foundational Kitten Owner Guidance">Foundational Kitten Owner Guidance</option>
+                <option value="Behavioral Assessment & Guidance">Behavioral Assessment &amp; Guidance</option>
+                <option value="Kitten Nutrition & Wellness Consultation">Kitten Nutrition &amp; Wellness Consultation</option>
+                <option value="Long-Term Kitten Care Planning">Long-Term Kitten Care Planning</option>
+                <option value="Not sure yet">Not sure yet / General inquiry</option>
+              </select>
+            </div>
+
+            <div class="terminal-field">
+              <label for="message">Tell Us About Your Needs</label>
+              <textarea id="message" name="message" class="terminal-input" placeholder="Share your kitten's age, goals, or time zone..."></textarea>
+            </div>
+
+            <button class="btn-sexy-liquid btn-sexy-primary" type="submit" style="width: 100%;">
+              <span>Transmit Inquiry</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+
+            <div id="form-status" class="terminal-alert"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         GLOBAL CTA BANNER
+         ======================================================================= -->
+    <section class="cta-universe-wrap">
+      <div class="container">
+        <div class="liquid-glass-slab cta-universe-glass reveal-fade">
+          <div class="cta-universe-content">
+            <h2>Ready to discuss your consultation needs?</h2>
+            <p>Connect with Kitten Hub to clarify your requirements and schedule a remote session.</p>
+          </div>
+          <a class="btn-sexy-liquid btn-sexy-primary" href="contact.html">
+            <span>Contact Us Today</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- =======================================================================
+       FOOTER
+       ======================================================================= -->
   <footer>
-    <div class="container footer-grid">
-      <div>
-        <h4>Kitten Hub</h4>
-        <p>Professional online consultation services.</p>
-        <p>Location: India</p>
+    <div class="container">
+      <div class="footer-quad-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-cat-prism" style="width: 36px; height: 36px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58 1.42 3.82-.16 5.76.47 1.06.74 2.21.74 3.42 0 4.97-4.03 9-9 9s-9-4.03-9-9c0-1.21.27-2.36.74-3.42C2.16 6.82 2.18 3.58 3.58 3c1.4-.58 4.65.26 6.42 2.26.65-.17 1.33-.26 2-.26z"/>
+              </svg>
+            </div>
+            <span>Kitten Hub</span>
+          </div>
+          <p>Professional online consultation services for kitten owners worldwide. Calm, structured, remote guidance.</p>
+          <p style="margin-top: 0.65rem; font-weight: 700; color: #ffffff;">Location: India · Serving Clients Globally</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Kitten Hub</a></li>
+            <li><a href="services.html">Services Overview</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="foundational-kitten-owner-guidance.html">Foundational Guidance</a></li>
+            <li><a href="behavioral-assessment-guidance.html">Behavioral Assessment</a></li>
+            <li><a href="kitten-nutrition-wellness.html">Nutrition &amp; Wellness</a></li>
+            <li><a href="long-term-kitten-care.html">Long-Term Care Planning</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Policies &amp; Trust</h4>
+          <p><strong>Refund Policy:</strong> Refunds are assessed case-by-case after consultation confirmation.</p>
+          <p><strong>Privacy:</strong> We respect client confidentiality and handle information responsibly.</p>
+          <p><strong>Payments:</strong> Handled via secure payment links after discussion.</p>
+        </div>
       </div>
-      <div>
-        <h4>Policies</h4>
-        <p>Refund &amp; Cancellation Policy: Refunds are assessed case-by-case after consultation confirmation.</p>
-        <p>Privacy Policy: We respect client confidentiality and handle information responsibly.</p>
+
+      <div class="footer-end-strip">
+        <div>© 2026 Kitten Hub. All rights reserved.</div>
+        <div>Online Consultations · Remote Worldwide</div>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <p>Email: kittenhubonline@gmail.com</p>
-        <p>Payments are handled via secure payment links after discussion.</p>
-      </div>
-    </div>
-    <div class="container" style="margin-top: 2rem; font-size: 0.85rem; color: var(--muted);">
-      © 2024 Kitten Hub. All rights reserved.
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modern.js"></script>
 </body>
 </html>
